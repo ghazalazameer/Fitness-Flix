@@ -1,0 +1,315 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block body %}
+
+    <div class="main-banner" id="top">
+      <video autoplay muted loop id="bg-video">
+          <source src="static/vdos/gym-vdo.mp4" type="video/mp4" />
+      </video>
+    
+      <div class="video-overlay header-text home">
+          <div class="caption">
+            <h2 style="text-decoration:underline;">About <em>Us</em></h2>
+              <h2>No Pain no <em>gain</em></h2>
+          </div>
+          <a href="#about" class="go-down">
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+      </div>
+    </div>
+
+    <!-- Start About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="content">
+          <div class="box wow bounceInUp">
+            <div class="inner">
+              <div class="img">
+                <img src="static/img/exerlib.jpg" alt="about" />
+              </div>
+              <div class="text">
+                <h4 style="color: #e75480;"><strong>Exercise Plans</strong></h4>
+                <p>
+                  Provide detailed descriptions of various exercises. Include information about how to perform each exercise correctly, the muscles targeted, and any equipment needed. Create sample workout plans for different fitness goals (e.g., weight loss, muscle gain, endurance). Include the exercises, sets, reps, and rest periods. Categorize exercises and workout plans based on difficulty levels to cater to users with varying fitness levels.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="box wow bounceInUp" data-wow-delay="0.2s">
+            <div class="inner">
+              <div class="img">
+                <img src="/static/img/nutlib.jpg" alt="about" />
+              </div>
+              <div class="text">
+                <h4 style="color: #e75480;"><strong>Nutrition Plans</strong> </h4>
+                <p>
+                  Offer an introduction to basic nutrition principles, including macronutrients (carbohydrates, proteins, fats), micronutrients, and the importance of a balanced diet. Share healthy and easy-to-prepare recipes that promote a balanced diet. Include nutritional information for each recipe. Provide tips on meal planning, portion control, and creating balanced meals. Offer sample meal plans for different dietary preferences (e.g., vegetarian, vegan, paleo).
+                </p> 
+              </div>
+            </div>
+          </div>
+          <div class="box wow bounceInUp" data-wow-delay="0.4s">
+            <div class="inner">
+              <div class="img">
+                <img src="static/img/tracklib.jpg" alt="about" />
+              </div>
+              <div class="text">
+                <h4 style="color: #e75480;"><strong>Health Tracker</strong></h4>
+                <p>
+                  Include tools for tracking health metrics such as weight, body mass index (BMI), daily calorie intake, and exercise progress. Enable users to set health and fitness goals. Provide guidance on setting realistic and achievable objectives.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var preloader = document.getElementById('load');
+      function myfunction(){
+          preloader.style.display='none';
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#load {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: white url(/images/Spin-Preloader-1.gif) no-repeat center;
+  z-index: 9999999;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.home {
+  height: 100vh;
+  background-size: cover;
+  padding: 15px;
+  -webkit-display: flex;
+  display: flex;
+  position: relative;
+}
+.home .go-down {
+  position: absolute;
+  bottom: 50px;
+  width: 26px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  left: 50%;
+  margin-left: -13px;
+}
+.home .go-down .fa {
+  color: #ffffff;
+  -webkit-animation: goDown 1s ease infinite;
+  animation: goDown 1s ease infinite;
+}
+@-webkit-keyframes goDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes goDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.home .container {
+  -webkit-display: flex;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.home h1 span {
+  color: rgb(175, 156, 175);
+}
+
+/*About section*/
+
+.about {
+  padding: 80px 0px;
+  background-color: #ffffff;
+}
+.about .container {
+  display: flex;
+  height: inherit;
+  justify-content: center;
+}
+
+.about .content {
+  -webkit-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about .content .box {
+  width: 370px;
+  padding: 15px;
+  border-radius: 20px;
+}
+.about .content .box .inner {
+  background-color: #222222;
+  border-radius: 20px;
+}
+.about .content .box:nth-child(2) .inner {
+  background-color: black;
+  border-radius: 20px;
+}
+.about .content .box .inner .img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.about .content .box .inner .text {
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.about .content .box .inner .text h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0px 0px 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+}
+.about .content .box .inner .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  height: auto;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.main-banner {
+  position: relative;
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  position: absolute;
+  background-color: rgba(35, 45, 57, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+}
+
+.main-banner .caption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-banner .caption h6 {
+  margin-top: 0px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.main-banner .caption h2 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 84px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.main-banner .caption h2 em {
+  font-style: normal;
+  color: #e75480;
+  font-weight: 900;
+}
+
+.inner {
+  border: 2px solid black;
+  box-shadow: 5px solid white;
+}
+
+.inner:hover {
+  transform: scale(1.009);
+  box-shadow: 2px 2px 2px rgb(191, 200, 109);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about .content .box {
+    width: 350px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-banner .caption h2 {
+    font-size: 48px;
+    width: 300px;
+    text-align: center;
+  }
+}
+
+    </stylExercise>
+  </body>
+</html>
+
+
+{% endblock body %}
