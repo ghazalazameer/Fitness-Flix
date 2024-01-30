@@ -30,7 +30,7 @@ FitBody is the growing platform for Gym-enthusiasts and they can choose there re
 3. Make your branch from test branch.
 
 ```markdown
-    git clone "repository link
+    git clone "repository link"
 ```
 
 3. change the present working directory to
