@@ -2,7 +2,7 @@
   🏋🏽Fitness Flix🏋🏽
 </p>
 
-![Website Screenshot]([./src/assets/repo%20imges/Screenshot%201.jpg](https://github.com/ariz565/FitnessFlix/blob/main/static/project%20FF.png)https://github.com/ariz565/FitnessFlix/blob/main/static/project%20FF.png)
+![Website Screenshot](https://raw.githubusercontent.com/ariz565/FitnessFlix/main/static/project%20FF.png)
 
 ## 🎯About
 FitBody is the growing platform for Gym-enthusiasts and they can choose there respective domains for the pricing category and we are happy to invite you in the gym-community.
