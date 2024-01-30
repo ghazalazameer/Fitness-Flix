@@ -7,6 +7,14 @@
 ## 🎯About
 FitBody is the growing platform for Gym-enthusiasts and they can choose there respective domains for the pricing category and we are happy to invite you in the gym-community.
 
+
+
+## 💫Features
+- Personalized Workout Plans: Provide the option for users to receive personalized workout plans tailored to their fitness goals. Users can input their preferences and goals, and the website generates a customized plan for them.
+
+- Progress Tracking: Enable users to track their fitness progress over time. They can input their measurements, record workout sessions, and monitor their improvements through charts or graphs.
+
+
 ### How to Contribute to this repository
 
 1. Fork the repository (Click the Fork button in the top right of this page,
@@ -39,11 +47,6 @@ FitBody is the growing platform for Gym-enthusiasts and they can choose there re
     
 ```
 
-
-## 💫Features
-- Personalized Workout Plans: Provide the option for users to receive personalized workout plans tailored to their fitness goals. Users can input their preferences and goals, and the website generates a customized plan for them.
-
-- Progress Tracking: Enable users to track their fitness progress over time. They can input their measurements, record workout sessions, and monitor their improvements through charts or graphs.
 
 - Nutrition Guidance: Offer nutrition tips and guidance to help users maintain a healthy diet and complement their fitness routines. This can include articles, meal plans, and recipes.
 
