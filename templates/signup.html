@@ -1,200 +1,207 @@
-
 {% extends "base.html" %}
 
 {% block body %}
 
-    <h1>signup</h1>
-   
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-        <title>signup</title>
-        <div class="main">
-        <div class="form">
-            <center><h2 style="background-color: white;border-radius:28px; height:45px; width:250px;">Sign-Up Box</h2></center>
-            <input type="text" name="username" placeholder="Enter Username">&nbsp;&nbsp;&nbsp;
-            <input type="text" name="fname" placeholder="Enter First Name">&nbsp;&nbsp;&nbsp; 
-            <input type="text" name="lname" placeholder="Enter Last Name">
-            <input type="email" name="email" placeholder="Enter Email">
-            <p style="font-size:17px; color: #fff; letter-spacing: 1px; margin-top:20px ; margin-bottom: -10px; margin-left: 2px;">Gender</p>
-            <input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px; font-size: 25px;" type="radio" name="gender" value="male"> <span style="color: #e75480;">Male</span>
-<input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px;" type="radio" name="gender" value="female"> <span style="color: #e75480;">Female</span>
-<input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px;" type="radio" name="gender" value="others"> <span style="color: #e75480;">Others</span>
-<br>
-            <input type="password" name="Pass1" placeholder="Create Password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="password" name="Pass2" placeholder="Re-Enter Password">
-            <button class="btnn"><a href="#">Sign-Up </a></button>
-    
-            <p style="color: white" class="link">-OR-<br>Already have an account<br>
-            <a style="color: #e75480" id="login-back" href="/login">Login here</a></p>
+<h1>signup</h1>
 
-            </div>
-        </div>
-        <style>
-          * {
-            margin: 0;
-            padding: 0;
-          }
-          .main {
-            width: 100%;
-            background: linear-gradient(
-                to top,
-                rgba(0, 0, 0, 0.8) 50%,
-                rgba(0, 0, 0, 0.8) 50%
-            ),
-            url("static/img/nutrition.jpg");
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-            padding-top: 80px; /* Add padding at the top to accommodate the navigation bar */
-        }
-  
-            .btn {
-              width: 100px;
-              height: 40px;
-              background: #ff7200;
-              border: 2px solid #ff7200;
-              margin-top: 13px;
-              color: #fff;
-              font-size: 15px;
-              border-bottom-right-radius: 5px;
-              border-bottom-left-radius: 5px;
-            }
-            .btn:focus {
-              outline: none;
-            }
-            /* newly */
-            .btn2 {
-              background-color: #000;
-              border: none;
-              color: white;
-              padding: 8px;
-              margin-right: 1rem;
-              font-size: 18px;
-              border-radius: 5px;
-              cursor: pointer;
-              transition: all 0.2s ease-in;
-              font-family: "Fira Sans", sans-serif;
-            }
-            .btn2:hover {
-              transform: scale(1.1);
-              cursor: pointer;
-            }
-            .srch:focus {
-              outline: none;
-            }
-          
-            #heading{
-              color: white;
-              /* text-align: center; */
-              /* margin-top: 20px; */
-              /* font-size: 50px; */
-              text-decoration: underline;
-              font-family: "Times New Roman", Times, serif;
-            font-size: 50px;
-            padding-left: 20vh;
-            margin-top: 8%;
-            letter-spacing: 2px;
-            }
-            .form {
-              width: 750px;
-              height: 520px;
-              background: light pink;
-              box-shadow: 0 8px 32px 0 rgba(192, 192, 192, 0.5);
-              border-radius: 10px;
-              border: 1px solid rgba(255, 255, 255, 0.18);
-              position: absolute;
-              margin-left: 70px;
-              top: 100px;
-              left: 200px;
-              padding: 25px;
-            }
-            
-            .form input {
-              width: 220px;
-              height: 25px;
-              background: transparent;
-              border-bottom: 1px solid #000;
-              border-top: none;
-              border-left: none;
-              border-right: none;
-              color: #fff;
-              font-size: 15px;
-              letter-spacing: 1px;
-              margin-top: 30px;
-              font-family: sans-serif;
-            }
-            .form input:focus {
-              outline: none;
-            }
-            ::placeholder {
-              color: white;
-              font-family: Arial, Helvetica, sans-serif;
-            }
-            .field1{
-              overflow: hidden;
-              float: left;
-            }
-            .field2{
-              overflow:hidden;
-              float: right;
-            }
-            .btnn {
-              width: 100%;
-              height: 40px;
-              background: #000;
-              border: none;
-              margin-top: 30px;
-              font-size: 18px;
-              border-radius: 10px;
-              cursor: pointer;
-              color: #fff;
-              transition: 0.4s ease;
-            }
-            .btnn:hover {
-              background: #fff;
-              color: #000;
-            }
-            .btnn:hover a {
-              /* background: #fff; */
-              color: #000;
-            }
-            .btnn a {
-              text-decoration: none;
-              color: #fff;
-              font-weight: bold;
-            }
-            .form .link {
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 17px;
-              padding-top: 20px;
-              text-align: center;
-            }
-            .form .link a {
-              text-decoration: none;
-              color: #000;
-            }
-            .liw {
-              padding-top: 15px;
-              padding-bottom: 10px;
-              text-align: center;
-            }
-            .icons a {
-              text-decoration: none;
-              color: white;
-            }
-            .icons ion-icon {
-              color: white;
-              font-size: 30px;
-              padding-left: 14px;
-              padding-top: 5px;
-              transition: 0.3s ease;
-            }
-            .icons ion-icon:hover {
-              color: #000;
-            }
-          
-        </style>
-    </body>
-    </html>
-    {% endblock body %}
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <title>signup</title>
+  <div class="main">
+    <div class="form">
+      <center>
+        <h2 style="background-color: white;border-radius:28px; height:45px; width:250px;">Sign-Up Box</h2>
+      </center>
+      <input type="text" name="username" placeholder="Enter Username">&nbsp;&nbsp;&nbsp;
+      <input type="text" name="fname" placeholder="Enter First Name">&nbsp;&nbsp;&nbsp;
+      <input type="text" name="lname" placeholder="Enter Last Name">
+      <input type="email" name="email" placeholder="Enter Email">
+      <p
+        style="font-size:17px; color: #fff; letter-spacing: 1px; margin-top:20px ; margin-bottom: -10px; margin-left: 2px;">
+        Gender</p>
+      <input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px; font-size: 25px;" type="radio"
+        name="gender" value="male"> <span style="color: #e75480;">Male</span>
+      <input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px;" type="radio" name="gender"
+        value="female"> <span style="color: #e75480;">Female</span>
+      <input style="height: 10px; display: inline-block; width: 30px; margin-right: 10px;" type="radio" name="gender"
+        value="others"> <span style="color: #e75480;">Others</span>
+      <br>
+      <input type="password" name="Pass1" placeholder="Create Password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="password" name="Pass2" placeholder="Re-Enter Password">
+      <button class="btnn"><a href="#">Sign-Up </a></button>
+
+      <p style="color: white" class="link">-OR-<br>Already have an account<br>
+        <a style="color: #e75480" id="login-back" href="/login">Login here</a>
+      </p>
+
+    </div>
+  </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      width: 100%;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, 0.8) 50%,
+          rgba(0, 0, 0, 0.8) 50%),
+        url("static/img/nutrition.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 100vh;
+      padding-top: 80px;
+      /* Add padding at the top to accommodate the navigation bar */
+    }
+
+    .btn {
+      width: 100px;
+      height: 40px;
+      background: #ff7200;
+      border: 2px solid #ff7200;
+      margin-top: 13px;
+      color: #fff;
+      font-size: 15px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    .btn:focus {
+      outline: none;
+    }
+
+    .srch:focus {
+      outline: none;
+    }
+
+    #heading {
+      color: white;
+      /* text-align: center; */
+      /* margin-top: 20px; */
+      /* font-size: 50px; */
+      text-decoration: underline;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 50px;
+      padding-left: 20vh;
+      margin-top: 8%;
+      letter-spacing: 2px;
+    }
+
+    .form {
+      width: 750px;
+      height: 520px;
+      background: light pink;
+      box-shadow: 0 8px 32px 0 rgba(192, 192, 192, 0.5);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      position: absolute;
+      margin-left: 70px;
+      top: 100px;
+      left: 200px;
+      padding: 25px;
+    }
+
+    .form input {
+      width: 220px;
+      height: 25px;
+      background: transparent;
+      border-bottom: 1px solid #000;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 1px;
+      margin-top: 30px;
+      font-family: sans-serif;
+    }
+
+    .form input:focus {
+      outline: none;
+    }
+
+    ::placeholder {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .field1 {
+      overflow: hidden;
+      float: left;
+    }
+
+    .field2 {
+      overflow: hidden;
+      float: right;
+    }
+
+    .btnn {
+      width: 100%;
+      height: 40px;
+      background: #000;
+      border: none;
+      margin-top: 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.4s ease;
+    }
+
+    .btnn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .btnn:hover a {
+      /* background: #fff; */
+      color: #000;
+    }
+
+    .btnn a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .form .link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    .form .link a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .liw {
+      padding-top: 15px;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+
+    .icons a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .icons ion-icon {
+      color: white;
+      font-size: 30px;
+      padding-left: 14px;
+      padding-top: 5px;
+      transition: 0.3s ease;
+    }
+
+    .icons ion-icon:hover {
+      color: #000;
+    }
+  </style>
+  </body>
+
+  </html>
+  {% endblock body %}
