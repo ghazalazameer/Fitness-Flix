@@ -7,9 +7,7 @@ from .views import protected_view, CustomLoginView
 urlpatterns = [
     path("", views.hero, name='home'),
     path("hero", views.hero, name='hero'),
-    path("about", views.about, name='about'),
     path("signup", views.signup_views, name='signup'),
-    path("contact", views.contact, name='contact'), 
     path("login", views.login_view, name="login"),
     path("logout", views.logout_view, name="logout"),
     path('protected', protected_view, name='protected'),
